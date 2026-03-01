@@ -157,7 +157,6 @@
             display: block;
         }
 
-        /* 視認性向上のための調整 */
         select {
             min-height: 38px;
         }
@@ -199,7 +198,6 @@
             color: var(--text-light);
         }
 
-        /* モバイル対応の強化 */
         @media screen and (max-width: 768px) {
             body {
                 padding: 10px;
@@ -241,15 +239,12 @@
             }
         }
 
-        /* 印刷用表示設定 */
         #print-header {
             display: none !important;
-            /* テンプレート自体は常に隠す */
         }
 
         .page-container #print-header {
             display: block !important;
-            /* コンテナ内のクローンのみ表示 */
         }
 
         .print-header-top {
@@ -260,7 +255,6 @@
             padding: 0 10px;
         }
 
-        /* 記録テーブルのスタイル */
         .record-table {
             width: 100%;
             border-collapse: collapse;
@@ -284,7 +278,6 @@
             font-weight: normal;
         }
 
-        /* プレビュー中の戻るボタン（画面上部） */
         .preview-back-btn {
             display: none;
             position: fixed;
@@ -311,7 +304,6 @@
 
         .record-table .col-date {
             width: 82px;
-            /* 限界まで狭める */
             text-align: center;
             white-space: nowrap;
             font-size: 0.85rem;
@@ -346,7 +338,6 @@
             color: white;
         }
 
-        /* 印刷・プレビュー時には操作列を隠す */
         @media print {
             .col-action {
                 display: none !important;
@@ -364,7 +355,6 @@
             padding: 8px;
         }
 
-        /* プレビューモード用のスタイル */
         body.preview-active {
             background-color: #525659;
             padding: 40px 0;
@@ -502,7 +492,6 @@
             <button class="tab-btn" onclick="switchTab('view')">ケース記録検索</button>
         </div>
 
-        <!-- Input Tab -->
         <div id="input-section" class="card">
             <div class="input-group">
                 <div class="field">
@@ -542,7 +531,6 @@
                     </tr>
                 </thead>
                 <tbody id="diary-table-body">
-                    <!-- JS pre-populates -->
                 </tbody>
             </table>
 
@@ -555,7 +543,6 @@
             </div>
         </div>
 
-        <!-- View Tab -->
         <div id="view-section" class="card hidden">
             <div class="input-group" id="user-filter-group">
                 <div class="field">
@@ -566,7 +553,6 @@
                 </div>
             </div>
 
-            <!-- 印刷用ヘッダーテンプレート -->
             <div id="print-header" class="hidden">
                 <div class="print-header-top">
                     <div style="width: 130px;">利用者氏名</div>
@@ -577,7 +563,6 @@
             </div>
 
             <div id="history-container">
-                <!-- JS handles pagination and header insertion here -->
                 <p style="text-align: center; color: var(--text-light); margin-top: 2rem;">
                     利用者を選択すると、過去の記録がここに表示されます。
                 </p>
